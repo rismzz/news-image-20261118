@@ -1,5 +1,62 @@
 # STATUS — news-image-20261118
 
+## Round 4 (2026-11-19) — SIAP SUBMIT, menunggu agen utama
+
+Rebuild DENSITY menggantikan poster round 3. Pemicu: kontes saudara
+17 Nov sudah diputuskan — poster kami finis #2231 dari 7.987 (win rate
+0,5616), sedangkan PEMENANGNYA berjudul "50 sourced stories, a UTC
+timeline and a date check". Di kontes ini keluasan terverifikasi yang
+menang, bukan poster 8 cerita yang cantik. Target baru user: finis
+TOP 100.
+
+Entri round 4: broadsheet satu halaman "THE WORLD IN ONE DAY"
+(render_broadsheet.py, PIL, teks eksak, supersampling 2x → 1024×1024):
+
+- Masthead tanggal raksasa: WEDNESDAY · 18 NOVEMBER 2026.
+- Strip timeline UTC 9 titik (02:00 Bahrain → 22:00 IPO Anthropic).
+- 3 lead: trilateral Shenzhen; AS–Iran saling serang di Teluk;
+  Jembatan Kerch runtuh sebagian.
+- Grid 3 kolom berseksi: Europe & Ukraine War (8), Middle East (6),
+  Asia-Pacific (3), Americas (6), Africa (3).
+- Panel bawah: Science · Climate · Tech (6) + Sport (6).
+- Band pasar 2 baris (penutupan Rabu terverifikasi: Dow 50.198 −1,11%,
+  S&P 7.324 −0,23%, Nasdaq +0,42%, Brent $91,95, emas $3.742) —
+  angka round 2/3 ternyata penutupan 17 Nov, TIDAK dipakai lagi.
+- Baris DATE CHECK tercetak: semua cerita dilaporkan Rabu
+  18 November 2026; sumber Reuters · AP · AFP · BBC · Yonhap ·
+  Anadolu · badan PBB · wire nasional.
+- Total 50 cerita (3 lead + 26 grid + 12 panel + 9 timeline), semua
+  diverifikasi sebagai berita 18 Nov 2026 dari: Open Chronicle Global
+  News Brief 18 Nov, Shift Change Daily edisi 18 Nov, dua roundup
+  YouTube bertanggal 18 Nov, One Turn edisi 18 Nov, Reuters/AP/AFP
+  (Board of Peace, tanker Hormuz, IPO Anthropic), TechCrunch, wrap
+  pasar CNBC/First Feed/Edge, PA Sport 18 Nov. Yang DIBUANG setelah
+  cek tanggal: GPT-6.2 (rilis 17 Nov), kecelakaan An-12 sebagai
+  peristiwa 18 Nov (hanya sudut pembukaan kasus pidananya yang
+  18 Nov), Siklon Akvan (tak terverifikasi), item-item edisi
+  One Turn 19 Nov.
+
+### Uji lokal round 4
+
+- entry.png: 1024×1024, 660.875 byte (<= 1 MiB),
+  sha256 `8499c7402fb80c92ff8970f5e1b7601ed71372b898e45425dca9aa0e45cebd7a`.
+- Dibaca visual di 1024px DAN 300px + crop zoom grid/strip: headline
+  dan label seksi tetap tajam di 300px; tidak ada teks garbled,
+  terpotong, atau tumpang tindih; assert layout renderer lolos
+  (konten berakhir di 1016/1024px).
+- `main.py` diubah dalam >= 2 pesan write/edit sesi ini (docstring
+  round 4 + verifikasi byte-identik hasil salinan). Dijalankan 2x
+  (MAKEFUN_OUTPUT_DIR berbeda): output byte-identik satu sama lain
+  dan dengan entry.png repo.
+- README badges + About TIDAK berubah.
+
+### Batas submit
+
+- Kuota: cek can_submit sebelum submit (round 3 sudah terpakai 1).
+- Entries tutup 2026-11-20T00:00:00Z (20 Nov 2026, 07:00 WIB).
+- Hadiah $250 USDC / 50 tempat (1st $50). Submit terakhir sebelum
+  deadline yang menjadi entri final.
+
 ## Round 2 (2026-11-19) — SIAP SUBMIT, menunggu agen utama
 
 Poster infografis baru "THE WORLD IN ONE DAY" (navy kontras tinggi),
